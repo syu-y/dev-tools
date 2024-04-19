@@ -1,25 +1,71 @@
 <script lang="ts">
   import Label from '../components/form/Label.svelte';
   import TextInput from '../components/form/TextInput.svelte';
-  let camelCaseStr: string = '';
-  let snakeCaseStr: string = '';
+  import { strToCamelCase, strToSnakeCase } from '../utils/string/caseConvert';
 
-  const handleChange = (event: { currentTarget: HTMLInputElement }) => {
-    snakeCaseStr = event.currentTarget.value;
+  let inCamelCase: string = '';
+  let outCamelCase: string = '';
+
+  const toCamelCase = (event: { currentTarget: HTMLInputElement }) => {
+    outCamelCase = strToCamelCase(event.currentTarget.value);
+  };
+
+  let inSnakeCase: string = '';
+  let outSnakeCase: string = '';
+  const toSnakeCase = (event: { currentTarget: HTMLInputElement }) => {
+    outSnakeCase = strToSnakeCase(event.currentTarget.value);
   };
 </script>
 
-<h1 class="text-blue-600 text-2xl">ケース変換</h1>
+<h1 class="text-blue-600 text-2xl">Case Convert</h1>
+<div class="py-1">
+  <h2>Convert Target</h2>
+  <ul class="list-disc list-inside text-xm">
+    <li>camelCase</li>
+    <li>PascalCase</li>
+    <li>snake_case</li>
+    <li>kebab-case</li>
+  </ul>
+</div>
 
-<Label labeltext="CamelCase" name="inCamelCase"></Label>
-<TextInput
-  type="text"
-  name="inCamelCase"
-  change={handleChange}
-  bind:value={camelCaseStr}
-/>
+<div class="py-1">
+  <div class="py-1">
+    <h2>Camel Case</h2>
+    <Label labeltext="From" name="inCamelCase"></Label>
+    <TextInput
+      type="text"
+      name="inCamelCase"
+      change={toCamelCase}
+      bind:value={inCamelCase}
+    />
 
-<Label labeltext="To SnakeCase" name="inSnakeCase"></Label>
-<TextInput type="text" name="inSnakeCase" bind:value={snakeCaseStr} />
+    <Label labeltext="To" name="outCamelCase"></Label>
+    <TextInput
+      type="text"
+      name="outCamelCase"
+      readonly={true}
+      bind:value={outCamelCase}
+    />
+  </div>
+
+  <div class="py-1">
+    <h2>Snake Case</h2>
+    <Label labeltext="From" name="inSnakeCase"></Label>
+    <TextInput
+      type="text"
+      name="inSnakeCase"
+      change={toSnakeCase}
+      bind:value={inSnakeCase}
+    />
+
+    <Label labeltext="To" name="outSnakeCase"></Label>
+    <TextInput
+      type="text"
+      name="outSnakeCase"
+      readonly={true}
+      bind:value={outSnakeCase}
+    />
+  </div>
+</div>
 
 <style></style>

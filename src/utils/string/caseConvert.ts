@@ -1,3 +1,5 @@
+import { isUpperCase, strReplaceByIndex } from './common';
+
 /**
  * キャメルケース変換
  * 変換対象：スネークケース、ケバブケース、パスカルケース
@@ -8,9 +10,11 @@ export const strToCamelCase = (value: string) => {
     group.toUpperCase().replace('-', '').replace('_', '')
   );
 
+  console.log('before : ' + result);
   // パスカルケースの場合は先頭を小文字に変換
-  result = result.charAt(0).toLowerCase();
-
+  if (isUpperCase(result.charAt(0))) {
+    result = strReplaceByIndex(result, 0, 0, result.charAt(0).toLowerCase());
+  }
   return result;
 };
 

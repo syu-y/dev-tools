@@ -11,5 +11,6 @@ export default {
     exclude: [],
     // experimental options
     experimental: {}
-  }
+  },
+  preprocess: vitePreprocess()
 }

@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from '@testing-library/svelte';
-import Case from '../../src/pages/Case.svelte';
+import Case from '@pages/Case.svelte';
 
 const labelInputCamel = 'From(PascalCase/snake-case/kebab-case)';
 const labelOutputCamel = 'To(CamelCase)';

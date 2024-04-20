@@ -1,18 +1,17 @@
 <script lang="ts">
-  import { Route, Router } from "svelte-routing";
-  import Layout from "./Layout.svelte";
-  import Home from "./pages/Home.svelte";
-  import Case from "./pages/Case.svelte";
+  import Layout from '@/Layout.svelte';
+  import Case from '@/pages/Case.svelte';
+  import Home from '@/pages/Home.svelte';
+  import { Route, Router } from 'svelte-routing';
 </script>
-
 
 <Router>
   <Layout>
     <Route path="/">
-      <Home　/>
+      <Home />
     </Route>
     <Route path="/case">
-      <Case/>
+      <Case />
     </Route>
   </Layout>
 </Router>

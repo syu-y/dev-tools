@@ -1,4 +1,4 @@
-import { strToCamelCase, strToSnakeCase } from '../caseConvert';
+import { strToCamelCase, strToSnakeCase } from '@utils/caseConvert';
 
 /**
  * キャメルケース変換

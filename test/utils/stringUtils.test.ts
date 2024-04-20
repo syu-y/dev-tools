@@ -1,4 +1,4 @@
-import { StringUtils } from '../../src/utils/stringUtils';
+import { StringUtils } from '@/utils/stringUtils';
 
 describe('StringUtils.ts', async () => {
   test('指定位置の文字列置き換え', async () => {

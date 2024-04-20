@@ -1,4 +1,4 @@
-import { StringUtils } from './stringUtils';
+import { StringUtils } from '@/utils/stringUtils';
 
 /**
  * キャメルケース変換

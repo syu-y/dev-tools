@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Label from '../components/form/Label.svelte';
-  import TextInput from '../components/form/TextInput.svelte';
-  import { strToCamelCase, strToSnakeCase } from '../utils/caseConvert';
+  import TextInput from '@/components/form/TextInput.svelte';
+  import Label from '@components/form/Label.svelte';
+  import { strToCamelCase, strToSnakeCase } from '@utils/caseConvert';
 
   let inCamelCase: string = '';
   let outCamelCase: string = '';

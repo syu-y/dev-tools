@@ -3,4 +3,6 @@
   export let name = '';
 </script>
 
-<label for={name}>{labeltext}</label>
+<label for={name}>
+  <span>{labeltext}</span>
+</label>

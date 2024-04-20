@@ -29,42 +29,73 @@
 </div>
 
 <div class="py-1">
-  <div class="py-1">
-    <h2>Camel Case</h2>
-    <Label labeltext="From" name="inCamelCase"></Label>
-    <TextInput
-      type="text"
-      name="inCamelCase"
-      change={toCamelCase}
-      bind:value={inCamelCase}
-    />
+  <h2>Convert Tool</h2>
+  <div class="p-2">
+    <h3>Convert to Camel Case</h3>
+    <div class="px-5">
+      <p>
+        <Label
+          labeltext="From(PascalCase/snake-case/kebab-case)"
+          name="inCamelCase"
+        />
+      </p>
+      <p class="px-5 py-1">
+        <TextInput
+          type="text"
+          id="inCamelCase"
+          name="inCamelCase"
+          change={toCamelCase}
+          bind:value={inCamelCase}
+        />
+      </p>
 
-    <Label labeltext="To" name="outCamelCase"></Label>
-    <TextInput
-      type="text"
-      name="outCamelCase"
-      readonly={true}
-      bind:value={outCamelCase}
-    />
+      <p>
+        <Label labeltext="To(CamelCase)" name="outCamelCase" />
+      </p>
+      <p class="px-5 py-1">
+        <TextInput
+          type="text"
+          id="outCamelCase"
+          name="outCamelCase"
+          readonly={true}
+          bind:value={outCamelCase}
+        />
+      </p>
+    </div>
   </div>
 
-  <div class="py-1">
-    <h2>Snake Case</h2>
-    <Label labeltext="From" name="inSnakeCase"></Label>
-    <TextInput
-      type="text"
-      name="inSnakeCase"
-      change={toSnakeCase}
-      bind:value={inSnakeCase}
-    />
+  <div class="p-2">
+    <h3>Convert to Snake Case</h3>
+    <div class="px-5">
+      <p>
+        <Label
+          labeltext="From(PascalCase/camelCase/kebab-case)"
+          name="inSnakeCase"
+        ></Label>
+      </p>
+      <p class="px-5 py-1">
+        <TextInput
+          type="text"
+          id="inSnakeCase"
+          name="inSnakeCase"
+          change={toSnakeCase}
+          bind:value={inSnakeCase}
+        />
+      </p>
 
-    <Label labeltext="To" name="outSnakeCase"></Label>
-    <TextInput
-      type="text"
-      name="outSnakeCase"
-      readonly={true}
-      bind:value={outSnakeCase}
-    />
+      <p>
+        <Label labeltext="To(SnakeCase)" name="outSnakeCase" />
+      </p>
+      <p class="px-5 py-1">
+        <TextInput
+          type="text"
+          id="outSnakeCase"
+          name="outSnakeCase"
+          readonly={true}
+          bind:value={outSnakeCase}
+        />
+      </p>
+    </div>
   </div>
 </div>
 
@@ -72,14 +103,6 @@
 
 <div class="py-1">
   <h2>Reference</h2>
-  <ul class="list-disc list-inside text-xm px-3">
-    <li>
-      <a
-        href="https://typescript-jp.gitbook.io/deep-dive/styleguide"
-        target="_blank">TypeScriptスタイルガイド夜</a
-      >
-    </li>
-  </ul>
   <ul class="list-disc list-inside text-xm px-3">
     <li>
       <a

@@ -13,8 +13,15 @@
      */
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "test/**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

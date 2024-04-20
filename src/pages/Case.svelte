@@ -1,7 +1,7 @@
 <script lang="ts">
   import Label from '../components/form/Label.svelte';
   import TextInput from '../components/form/TextInput.svelte';
-  import { strToCamelCase, strToSnakeCase } from '../utils/string/caseConvert';
+  import { strToCamelCase, strToSnakeCase } from '../utils/caseConvert';
 
   let inCamelCase: string = '';
   let outCamelCase: string = '';
@@ -20,7 +20,7 @@
 <h1 class="text-blue-600 text-2xl">Case Convert</h1>
 <div class="py-1">
   <h2>Convert Target</h2>
-  <ul class="list-disc list-inside text-xm">
+  <ul class="list-disc list-inside text-xm px-3">
     <li>camelCase</li>
     <li>PascalCase</li>
     <li>snake_case</li>
@@ -66,6 +66,28 @@
       bind:value={outSnakeCase}
     />
   </div>
+</div>
+
+<div></div>
+
+<div class="py-1">
+  <h2>Reference</h2>
+  <ul class="list-disc list-inside text-xm px-3">
+    <li>
+      <a
+        href="https://typescript-jp.gitbook.io/deep-dive/styleguide"
+        target="_blank">TypeScriptスタイルガイド夜</a
+      >
+    </li>
+  </ul>
+  <ul class="list-disc list-inside text-xm px-3">
+    <li>
+      <a
+        href="https://typescript-jp.gitbook.io/deep-dive/styleguide"
+        target="_blank">TypeScriptスタイルガイド夜</a
+      >
+    </li>
+  </ul>
 </div>
 
 <style></style>

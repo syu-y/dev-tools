@@ -8,11 +8,6 @@ export default defineConfig({
   plugins: [svelte()],
   resolve: {
     alias: [
-      // '/@/': path.join(__dirname, 'src/'),
-      // '/@pages/': path.join(__dirname, 'src/pages'),
-      // '/@components/': path.join(__dirname, 'src/components'),
-      // '/@lib/': path.join(__dirname, 'src/lib'),
-      // '/@utils/': path.join(__dirname, 'src/utils'),
       {
         find: '@',
         replacement: fileURLToPath(new URL('./src', import.meta.url)),

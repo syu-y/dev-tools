@@ -1,4 +1,4 @@
-import { isUpperCase, strReplaceByIndex } from './common';
+import { StringUtils } from './stringUtils';
 
 /**
  * キャメルケース変換
@@ -11,8 +11,13 @@ export const strToCamelCase = (value: string) => {
   );
 
   // パスカルケースの場合は先頭を小文字に変換
-  if (isUpperCase(result.charAt(0))) {
-    result = strReplaceByIndex(result, 0, 0, result.charAt(0).toLowerCase());
+  if (StringUtils.isUpperCase(result.charAt(0))) {
+    result = StringUtils.strReplaceByIndex(
+      result,
+      0,
+      0,
+      result.charAt(0).toLowerCase()
+    );
   }
   return result;
 };

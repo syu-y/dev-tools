@@ -15,6 +15,10 @@
   const toSnakeCase = (event: { currentTarget: HTMLInputElement }) => {
     outSnakeCase = strToSnakeCase(event.currentTarget.value);
   };
+
+  // TODO: ケバブケース
+  // TODO: パスカルケースへの変換
+  // TODO: CSVファイルでまとめて変換
 </script>
 
 <h1 class="text-blue-600 text-2xl">Case Convert</h1>

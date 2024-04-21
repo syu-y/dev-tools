@@ -1,15 +1,23 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import PageSubTitle from '@/components/PageSubTitle.svelte';
+  import PageTitle from '@/components/PageTitle.svelte';
+</script>
 
-<h1 class="text-2xl text-blue-600">Home</h1>
+<PageTitle>Home</PageTitle>
 <div class="py-1">
-  <h2>Tools</h2>
-  <div class="py-1">
-    <h3>Tools</h3>
-    <ul class="px-3 list-disc list-inside text-xm">
-      <li><a href="/case">Case Convert Tools</a></li>
-      <li><a href="/count">Count Tools</a></li>
-    </ul>
-  </div>
+  <PageSubTitle>Tools</PageSubTitle>
+  <ul class="px-3 list-disc list-inside text-xm">
+    <li><a href="/case">Case Convert Tools</a></li>
+    <li><a href="/count">Count Tools</a></li>
+  </ul>
+</div>
+
+<div class="py-1">
+  <PageSubTitle>Tips</PageSubTitle>
+  <ul class="px-3 list-disc list-inside text-xm">
+    <li><a href="/case">Case Convert Tools</a></li>
+    <li><a href="/count">Count Tools</a></li>
+  </ul>
 </div>
 
 <style></style>

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PageSubTitle from '@/components/PageSubTitle.svelte';
+  import PageTitle from '@/components/PageTitle.svelte';
   import TextInput from '@/components/form/TextInput.svelte';
   import Label from '@components/form/Label.svelte';
   import { strToCamelCase, strToSnakeCase } from '@utils/caseConvert';
@@ -21,9 +23,9 @@
   // TODO: CSVファイルでまとめて変換
 </script>
 
-<h1 class="text-2xl text-blue-600">Case Convert</h1>
+<PageTitle>Case Convert</PageTitle>
 <div class="py-1">
-  <h2>Convert Target</h2>
+  <PageSubTitle>Convert Target</PageSubTitle>
   <ul class="px-3 list-disc list-inside text-xm">
     <li>camelCase</li>
     <li>PascalCase</li>

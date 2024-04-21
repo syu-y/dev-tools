@@ -19,4 +19,25 @@ export const StringUtils = {
   isLowerCase: (str: string) => {
     return str === str.toLowerCase() ? true : false;
   },
+
+  // 文字数カウント（表示されている文字数
+  getDisplayCharacterLength: (str: string) => {
+    const segmenter = new Intl.Segmenter('ja-JP', { granularity: 'grapheme' });
+    return [...segmenter.segment(str)].length;
+  },
+
+  // 文字数カウント（異体字は2文字でカウント）
+  getCharacterLength: (str: string) => {
+    return [...str].length;
+  },
+
+  // バイト数カウント
+  getBytes: (str: string) => {
+    return new Blob([str]).size.toString();
+  },
+
+  // 文字カウント
+  getSpecificharacterCount: (text: string, targetStr: string) => {
+    return (text.match(new RegExp(targetStr, 'g')) || []).length;
+  },
 };

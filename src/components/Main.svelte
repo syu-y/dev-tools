@@ -1,3 +1,3 @@
-<main class='relative'>
-  <slot/>
+<main class="relative">
+  <slot />
 </main>

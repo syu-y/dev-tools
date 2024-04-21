@@ -21,10 +21,10 @@
   // TODO: CSVファイルでまとめて変換
 </script>
 
-<h1 class="text-blue-600 text-2xl">Case Convert</h1>
+<h1 class="text-2xl text-blue-600">Case Convert</h1>
 <div class="py-1">
   <h2>Convert Target</h2>
-  <ul class="list-disc list-inside text-xm px-3">
+  <ul class="px-3 list-disc list-inside text-xm">
     <li>camelCase</li>
     <li>PascalCase</li>
     <li>snake_case</li>
@@ -107,7 +107,7 @@
 
 <div class="py-1">
   <h2>Reference</h2>
-  <ul class="list-disc list-inside text-xm px-3">
+  <ul class="px-3 list-disc list-inside text-xm">
     <li>
       <a
         href="https://typescript-jp.gitbook.io/deep-dive/styleguide"

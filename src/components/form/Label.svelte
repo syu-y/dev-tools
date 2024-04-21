@@ -1,8 +1,9 @@
 <script lang="ts">
   export let labeltext = '';
   export let name = '';
+  export let width = '';
 </script>
 
-<label for={name}>
+<label class="inline-block align-top {width}" for={name}>
   <span>{labeltext}</span>
 </label>

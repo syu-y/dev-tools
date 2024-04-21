@@ -3,6 +3,7 @@
   import Case from '@/pages/Case.svelte';
   import Home from '@/pages/Home.svelte';
   import { Route, Router } from 'svelte-routing';
+  import Count from './pages/Count.svelte';
 </script>
 
 <Router>
@@ -12,6 +13,9 @@
     </Route>
     <Route path="/case">
       <Case />
+    </Route>
+    <Route path="/count">
+      <Count />
     </Route>
   </Layout>
 </Router>

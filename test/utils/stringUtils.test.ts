@@ -1,6 +1,7 @@
 import { StringUtils } from '@/utils/stringUtils';
 
 describe('StringUtils.ts', async () => {
+  //　置換
   test('指定位置の文字列置き換え', async () => {
     let originalStr = 'abcdef';
     const replaceStr = '123';
@@ -13,6 +14,8 @@ describe('StringUtils.ts', async () => {
     const correctStr = 'a123def';
     expect(replacedStr).toEqual(correctStr);
   });
+
+  // 文字判定テスト
   test('大文字判定', async () => {
     const result = StringUtils.isUpperCase('A');
     expect(result).toBeTruthy();
@@ -28,5 +31,11 @@ describe('StringUtils.ts', async () => {
   test('小文字判定', async () => {
     const result = StringUtils.isLowerCase('A');
     expect(result).toBeFalsy();
+  });
+
+  // カウント
+  test('文字列の長さをカウント', async () => {
+    const result = StringUtils.getCharacterLength('ABCDE');
+    expect(result).toBe(5);
   });
 });

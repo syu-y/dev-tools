@@ -33,7 +33,7 @@ export const StringUtils = {
 
   // バイト数カウント
   getBytes: (str: string) => {
-    return new Blob([str]).size.toString();
+    return new Blob([str]).size;
   },
 
   // 文字カウント
